@@ -1,0 +1,19 @@
+<!--pages/background/background.wxml-->
+<!--index.wxml-->
+<view class="container">
+<view class="uploader">
+  <navigator url="/pages/spirit/spirit" open-type="navigate" class="uploader-text">
+    <text>志愿服务精神</text>
+  </navigator>
+</view>
+<view class="uploader">
+  <navigator url="/pages/activeType/activeType" open-type="navigate" class="uploader-text">
+    <text>志愿服务类型</text>
+  </navigator>
+</view>
+<view class="uploader">
+  <navigator url="/pages/sense/sense" open-type="navigate" class="uploader-text">
+    <text>志愿服务价值</text>
+  </navigator>
+</view>
+</view>

@@ -1,0 +1,43 @@
+page {
+  background-color: #ECEEEB;
+}
+.fb_content {
+  background-color: #ffffff;
+}
+.fb_content textarea {
+  width: 100vw;
+  height: 320rpx;
+  padding: 10rpx;
+}
+.fb_content .tools_btn {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx;
+}
+.fb_content .tools_btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90rpx;
+  height: 90rpx;
+  font-size: 40rpx;
+  padding: 0rpx;
+  margin-left: 20rpx;
+}
+.btn {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.btn button {
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25% !important;
+  height: 100rpx;
+  padding: 0px;
+  margin-left: 200rpx;
+}

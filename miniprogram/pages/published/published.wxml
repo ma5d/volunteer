@@ -1,0 +1,13 @@
+<!--pages/published/published.wxml-->
+<view class="activity" wx:for="{{published}}" wx:key="index">
+    <view class="activity_deteil">
+        <image src="{{item.pictures[0]}}" class="activity_image"></image>
+        <view class="activity_content" name="adad">
+            <view class="activity_position">{{item.act_name}}</view>
+            <view class="activity_work_time">{{item.begin_time}}</view>
+            <view class="activity_demand_quantity">招聘人数：{{item.need_number}}</view>
+            <view class="activity_work_type">{{item.act_type}}</view>
+            <view class="activity_more" bindtap="activity_more" id="{{item._id}}">管理</view>
+        </view>
+    </view>
+</view>

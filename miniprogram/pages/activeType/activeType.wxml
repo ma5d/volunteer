@@ -1,0 +1,64 @@
+<!--pages/activeType/activeType.wxml-->
+<text>
+<text class="highText">
+1.便民利民类
+</text>
+<text>
+提供家电维修、家政联络、信息咨询等服务。
+</text>
+<text class="highText">
+2.扶贫帮困类
+</text>
+<text>
+为下岗失业职工、残疾人、老年人、失学儿童、特殊困难家庭等弱势群体，提供力所能及的帮扶。
+</text>
+<text class="highText">
+3.就业指导类
+</text>
+<text>
+提供技能培训、岗位推荐、维权援助等服务。
+</text>
+<text class="highText">
+4.治安维稳类
+</text>
+<text>
+开展义务巡逻、矛盾调解、法律咨询、青少年帮教等服务。
+</text>
+<text class="highText">
+5.卫生保健类
+</text>
+<text>
+为病人、残疾人、老年人进行健康检查、康复保健、卫生防疫等服务。
+</text>
+<text class="highText">
+6.环境维护类
+</text>
+<text>
+提供环境保洁、绿化维护、家庭美化指导等服务。
+</text>
+<text class="highText">
+7.宣传教育类
+</text>
+<text>
+开展政策法规、科普知识、安全常识、健康知识宣传等服务。
+</text>
+<text class="highText">
+8.文体娱乐类
+</text>
+<text>
+提供文艺宣传、健身活动、戏剧票友、棋牌娱乐、书画摄影等服务。
+</text>
+<text class="highText">
+9.助农增收类
+</text>
+<text>
+组织科技人员下乡送科技、送信息服务。
+</text>
+<text class="highText">
+10.心理咨询类
+</text>
+<text>
+对农民工、下岗失业人员、未安置大学毕业生等群体开展有针对性的心理辅导活动。
+</text>
+</text>
+

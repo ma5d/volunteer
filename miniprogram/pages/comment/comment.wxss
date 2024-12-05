@@ -1,0 +1,331 @@
+/* pages/comment/comment.wxss */
+page{
+  background-color: #EAE8E8;
+}
+
+.main{
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.Title-Part{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 40rpx;
+  padding-bottom: 20rpx;
+}
+
+.Title-Part .Title{
+  font-size: 28rpx;
+  color:#666;
+  margin-left: 20rpx;
+}
+
+.Title-Part .comment{
+  width:180rpx;
+  position: absolute;
+  font-size: 28rpx;
+  color:#4A6141;
+  right:20rpx;
+  overflow: hidden;
+  background-color: #EAE8E8;
+}
+
+.main .commentPart{
+  text-align: left;
+}
+
+.commentPart .main-comment{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 30rpx 20rpx;
+}
+
+.commentPart .post-avatar{
+  flex-shrink: 0;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.commentPart .ID-comment{
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.commentPart .IDPart{
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.commentPart .post-name{
+  font-size: 24rpx;
+  margin-left: 10rpx;
+  color: #666
+}
+
+.top-box{
+  width: 60rpx;
+  height: 35rpx;
+  font-size: 22rpx;
+  margin-left: 10rpx;
+  background-color: #C3C3C3;
+  color:#FFFFFF;
+  border-radius: 7rpx;
+  letter-spacing: 0.1rem;
+  padding-left: 10rpx;
+  padding-top: 3rpx;
+  font-family: Microsoft Yahei;
+}
+
+.top-box .top-comment{
+  vertical-align: middle;
+}
+
+.commentPart .upPart{
+  position: absolute;
+  right: 20rpx;
+}
+
+.commentPart .up{
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.commentPart .upNum{
+  color: #4A6141;
+  margin: 0 10rpx;
+  font-size: 24rpx;
+}
+
+.commentPart .post-comment{
+  
+  letter-spacing: 0.05rem;
+  font-size: 28rpx;
+  color: black;
+  margin: 5rpx 40rpx 30rpx 10rpx;
+}
+
+
+.commentPart .post-time{
+  border-bottom: 1rpx solid #f2e7e1;
+  padding-bottom:6rpx;
+  margin: 10rpx 15rpx;
+  font-size: 24rpx;
+  color: #ccc;
+}
+
+/**********Mask Part用于使背面变灰***************/
+.mask{
+  z-index: 999;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+/***********更多模块***************/
+.commentPart .message-part{
+  flex-direction: row;
+  display: flex;
+  margin-left: 10rpx;
+  margin-top: -20rpx;
+  
+}
+
+.commentPart .leave-message{
+  flex-shrink: 0;
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.commentPart .more-function{
+  flex-shrink: 0;
+  margin-left: 45rpx;
+  width: 24rpx;
+  height: 24rpx;
+}
+
+/*********更多功能块*********/
+.upload-moreFunction{
+  background-color: white;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+  border: solid white;
+  border-width: 20rpx 0 0 0;
+  z-index: 1000;
+  width: 750rpx;
+
+  position: fixed;
+ 
+  overflow-y: hidden;
+}
+
+.upload-moreFunction .top-module{
+ margin-top: 20rpx;
+ height: 40rpx;
+}
+
+.upload-moreFunction .intro{
+ overflow: hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap;
+ text-align: center;
+ color: #8B8B8B;
+ font-size: 0.8rem;
+ 
+ padding: 0 2rem 5rpx 2rem;
+}
+
+.upload-moreFunction .module{
+ height: 50rpx;
+ margin-top: 10rpx;
+ width: 100%;
+ padding-top: 15rpx;
+ border-top: 3rpx solid #E4E8E8;
+}
+
+.upload-moreFunction .image{
+ width: 32rpx;
+ height: 32rpx;
+ margin-left: 300rpx;
+}
+
+.upload-moreFunction .message{
+ margin-left: 18rpx;
+ font-size: 1rem;
+ font-family: Microsoft Yahei;
+  letter-spacing: 0.1rem;
+  color: black;
+}
+
+.upload-moreFunction .cancel{
+  height:60rpx;
+  padding-top: 15rpx;
+  border-top: 10rpx solid #E4E8E8;
+}
+
+.upload-moreFunction .cancel-message{
+  margin-left: 320rpx;
+  padding-top: 5rpx;
+  font-size: 1.04rem;
+  font-family: Microsoft Yahei;
+  letter-spacing: 0.3rem;
+}
+/***********end**************/
+
+/************留言部分*****************/
+.image-size{
+  flex-shrink: 0;
+  margin: 5rpx 10rpx 5rpx 5rpx
+}
+
+.subComment{
+  margin-left: -5rpx;
+}
+.subComment .user{
+  border:solid #07C160;
+  border-width: 0 0 0 5rpx;
+  padding: 3rpx 0 8rpx 8rpx; 
+  font-size: 24rpx;
+  letter-spacing: 0.02rem;
+  color: #8B8B8B;
+}
+
+.subComment .message{
+  padding-left: 11rpx;
+  font-size: 28rpx;
+  color: black;
+  font-family: Microsoft Yahei;
+}
+
+.subComment .message-part{
+  flex-direction: row;
+  display: flex;
+  margin-top: 6rpx;
+}
+
+.subComment .leave-message{
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.subComment .more-function{
+
+  width: 24rpx;
+  height: 24rpx;
+}
+/************end*****************/
+
+/***********输入框部分*************/
+.upload-comment{
+  background-color: white;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+  width: 690rpx;
+  border:30rpx solid white;
+  font-size: 28rpx;
+  position: fixed;
+  height: 480px;
+  z-index: 1000;
+  overflow-y: hidden;
+}
+
+.upload-comment .upload-status{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 15rpx;
+  width: 700rpx;
+}
+
+.upload-comment .upload-cancel{
+  flex-shrink: 0;
+  padding-left: 15rpx;
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.upload-comment .upload-hint1{
+  flex-shrink: 0;
+  margin-left: 240rpx;
+  letter-spacing: 0.1em;
+}
+
+.upload-comment .upload-submit{
+  flex-shrink: 0;
+  width: 80rpx;
+  height: 50rpx;
+  background-color: #EDEDED;
+  color: #BEBEBE;
+  letter-spacing: 0.1em;
+  border: 5px solid white;
+  border-radius: 10px;
+  margin-left: 200rpx;
+  padding-left: 20rpx;
+  padding-top: 10rpx;
+}
+
+.upload-comment .upload-submitted{
+  flex-shrink: 0;
+  width: 80rpx;
+  height: 50rpx;
+  background-color: #07C160;
+  color: #FFFFFF;
+  letter-spacing: 0.1em;
+  border: 5px solid white;
+  border-radius: 10px;
+  margin-left: 200rpx;
+  padding-left: 20rpx;
+  padding-top: 10rpx;
+}
+
+.upload-comment .upload-input{
+  width: 680rpx;
+  margin-top: 40rpx;
+  padding-left: 0.3em;
+}

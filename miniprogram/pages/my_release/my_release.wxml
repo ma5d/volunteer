@@ -1,0 +1,14 @@
+<!--pages/my_release/my_release.wxml-->
+<view class="container">
+<view class="uploader">
+  <navigator url="/pages/add_activity/add_activity" open-type="navigate" class="uploader-text">
+    <text>发布新活动</text>
+  </navigator>
+</view>
+<view class="uploader">
+  <navigator url="/pages/published/published" open-type="navigate" class="uploader-text">
+    <text>查看已发布活动</text>
+  </navigator>
+</view>
+</view>
+

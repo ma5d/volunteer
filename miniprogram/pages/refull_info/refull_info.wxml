@@ -1,0 +1,48 @@
+<view class="container">
+    <view class="title">用户绑定信息</view>
+    <form bindsubmit="submit">
+        <view>
+            <text>姓名：</text>
+            <input placeholder="例如：张三(必填)" name="name" value="" />
+        </view>
+        <view>
+            <text>年龄：</text>
+            <input placeholder="例如：18" name="age" value="" />
+        </view>
+        <view>
+           <text>性别：</text>
+           <radio-group name="gender">
+                <label><radio value="0" />男</label>
+                <label><radio value="1" />女</label>
+           </radio-group>
+        </view>
+        <view>
+            <text>职业：</text>
+            <input placeholder="例如：自由工作者" name="occupation" value="" />
+        </view>
+        <view>
+            <text>城市：</text>
+            <input placeholder="例如：北京(必填)" name="city" value="" />
+        </view>
+        <view>
+            <text>联系方式：</text>
+            <input placeholder="例如：12345678910(必填)" name="phonenub" value="" />
+        </view>
+        <view>
+            <text>爱好类型：</text>
+            <checkbox-group name="qinxiang">
+                <label><checkbox value="环境保护">环境保护</checkbox></label>
+                <label><checkbox value="宣传教育">宣传教育</checkbox></label>
+                <label><checkbox value="文体娱乐">文体娱乐</checkbox></label>
+                <label><checkbox value="利民便民">利民便民</checkbox></label>
+                <label><checkbox value="扶贫帮困">扶贫帮困</checkbox></label>
+                <label><checkbox value="就业指导">就业指导</checkbox></label>
+                <label><checkbox value="治安维稳">治安维稳</checkbox></label>
+                <label><checkbox value="卫生保健">卫生保健</checkbox></label>
+                <label><checkbox value="助农增收">助农增收</checkbox></label>
+                <label><checkbox value="心理咨询">心理咨询</checkbox></label>
+            </checkbox-group>
+        </view>
+        <button form-type="submit">提交</button>
+    </form>
+</view>

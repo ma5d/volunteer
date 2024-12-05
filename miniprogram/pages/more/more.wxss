@@ -1,0 +1,33 @@
+/* pages/more/more.wxss */
+
+.title {
+    width: 20%;
+    float: left;
+    /* background-color: yellow; */
+    margin: 10px;
+}
+
+.content {
+    width: 65%;
+    float: right;
+    /* background-color: red; */
+    margin: 10px;
+}
+
+.introduction {
+    width: 65%;
+    float: left;
+    margin: 10rpx, auto;
+    height: 200rpx;
+    border: 1px solid black;
+}
+
+.image {
+    width: 90%;
+    margin: auto;
+    height: 200rpx;
+}
+
+.contact {
+    margin: 10rpx;
+}

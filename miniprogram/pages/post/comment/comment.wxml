@@ -1,0 +1,145 @@
+<!--pages/comment/comment.wxml-->
+<view id="mainPage" class="main" >
+  
+  <view class="brightnessDown" >
+    <!--标题设置-->
+    <view class="Title-Part">
+      <view class='Title'>饼子屋的烧烤摊</view>
+      <button class='comment' open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" hidden="{{userStatus}}">登录</button>
+      <button class='comment' catchtap="translateSendUp" hidden="{{!userStatus}}">写留言</button>
+    </view>
+
+    <!--一条评论的模版-->
+    <view class="commentPart" >
+      <block wx:for="{{comments}}" wx:for-item="cm" wx:for-index="idx" wx:key="_id">
+        <!--根节点
+            |---头像
+            |---ID、点赞数、内容
+            |  |--ID与点赞数
+            |  |     |----ID
+            |  |     |____点赞数
+            |  |__评论内容
+            -->
+        <!-- 
+          用于变化style，但是会所有的评论都变化，这样子还不行，还得捕捉点击的某个idx
+          <view class="main-comment" style="{{comment_style.style}}" catchlongtap="longTapDelete"> 
+          -->
+        <view class="main-comment" >
+          <image class="post-avatar" mode="scaleToFill" src="{{cm.avatar}}" />
+          <view class="ID-comment">
+            <view class="IDPart">
+              <view class="post-name">{{cm.username}}</view>
+              <view wx:if="{{idx==0}}" class="top-box"> 
+                <view class="top-comment">置顶</view>
+              </view>
+              <view class="upPart">
+                <view class="login-check" hidden="{{!userStatus}}">
+                  <image class="up" hidden="{{cm.upInfo.upStatus}}" src="../../../images/icon/wx_app_like.png" catchtap="setUp" data-comment-idx="{{idx}}" />
+                  <image class="up" hidden="{{!cm.upInfo.upStatus}}" src="../../../images/icon/wx_app_liked.png" catchtap="setUp" data-comment-idx="{{idx}}"/>
+                  <text  class="upNum">{{cm.upInfo.upNum}}</text>
+                </view>
+              </view>
+            </view>
+            <view class="post-comment" >
+              <text class="content-txt" selectable="{{true}}">{{cm.content.txt}}</text>
+            </view>
+            <view class="message-part">
+              <view class="image-size" catchtap="translateLeaveUp" data-more-idx="{{idx}}">
+                <image class="leave-message" src="../../../images/icon/wx_app_message.png"  />
+              </view>
+              <view class="image-size"  catchtap="up_moreFunction" data-more-idx="{{idx}}" >
+                <image class="more-function" src="../../../images/icon/wx_more_function.png"/>
+              </view>
+            </view>
+            <!--对评论的留言板块-->
+            <block wx:for="{{cm.leaveMessage}}" wx:for-item="lcm" wx:for-index="lidx" wx:key="_id">
+              <view class="subComment">
+                <view class="IDPart">
+                  <view class="user">{{lcm.username}}</view>
+                  <view class="upPart">
+                    <view class="login-check" hidden="{{!userStatus}}">
+                      <image class="up" hidden="{{lcm.upInfo.upStatus}}" src="../../../images/icon/wx_app_like.png" catchtap="lSetUp" data-comment-idx="{{idx}}" data-l-idx="{{lidx}}" />
+                      <image class="up" hidden="{{!lcm.upInfo.upStatus}}" src="../../../images/icon/wx_app_liked.png" catchtap="lSetUp" data-comment-idx="{{idx}}" data-l-idx="{{lidx}}" />
+                      <text  class="upNum">{{lcm.upInfo.upNum}}</text>
+                    </view>
+                  </view>
+                  
+                </view>
+                <view class="message">{{lcm.comment}}</view>
+                <view class="message-part">
+                  <view class="image-size" catchtap="translateLeaveUp" data-more-idx="{{idx}}">
+                   <image class="leave-message" src="../../../images/icon/wx_app_message.png"  />
+                  </view>
+                  <!--拉起更多实现的还不好-->
+                  <view class="image-size" catchtap="up_moreFunction" data-more-idx="{{idx}}" data-l-idx="{{lidx}}">
+                    <image class="more-function" src="../../../images/icon/wx_more_function.png"  />
+                  </view>
+                </view>
+              </view>
+            </block>
+          </view>
+          
+          
+        </view>
+
+        <!--<view class="post-time">{{cm.formatedDate}}</view>-->
+      </block>
+    
+    </view>
+  </view>
+ 
+  <!--mask 透明度背景，出现留言时使背景变暗-->
+  <view id="mask" class="mask"  style="{{txtHeight}}" hidden="{{!postStatus}}" catchtap="translateYDown"></view>
+
+  <!--留言部分 以隐藏形式实现-->
+  <view id="upload" class="upload-comment" style="{{commentStyle}}" animation="{{animation}}">
+    <view class="upload-status">
+      <image class="upload-cancel" src="../../../images/icon/wx_app_xx.png" catchtap="translateYDown" />
+      <view class="upload-hint1" >写留言</view>
+      <view class="upload-submit" hidden="{{keyboardStatus}}">提交</view>
+      <view class="upload-submitted" hidden="{{!SEND}}" catchtap="sendMoreMsg">提交</view>
+      <view class="upload-submitted" hidden="{{!LEAVE}}" catchtap="leaveMoreMsg" data-more-idx="{{moreIdx}}">提交</view>
+    </view>
+    <textarea class="upload-input" placeholder="说说想吃什么，辣不辣，葱花香菜要不要" catchinput="bindCommentInput" value="{{keyboardInput}}"></textarea>
+  </view>
+
+  <!-- 更多功能 以隐藏形式实现-->
+  <view id="moreFunction" class="upload-moreFunction" style="{{txtBottom}}" animation="{{moreFunctionAnimation}}">
+    <view class="top-module">
+      <view class="intro" >{{moreMessage}}</view>
+    </view>
+    
+    <view class="module" bindtap="moreFunction_up">
+      <image class="image" src="../../../images/icon/wx_app_like_more.png"></image>
+      <text class="message">点赞</text>
+    </view>
+    <view class="module" catchtap="moreFunction_leave">
+      <image class="image" src="../../../images/icon/wx_app_message_more.png" ></image>
+      <text class="message">回复</text>
+    </view>
+     <view class="module" hidden="{{!moreDeleteStatus}}" catchtap="moreFunction_delete">
+      <image class="image" src="../../../images/icon/wx_app_xx_more.png"></image>
+      <text class="message">删除</text>
+    </view>
+    <view class="cancel" catchtap="translateYDown">
+      <text class="cancel-message" >取消</text>
+    </view>
+  </view>
+
+</view>
+
+
+ <!--输入部分-->
+  <!--
+  <view class="input-box">
+    <view class="send-msg-box">
+      <view class='input-item'>
+        <input class="input submit-input" placeholder="说点什么吧..." value="{{keyboardInput}}" bindinput="bindCommentInput"></input>
+      </view>
+      <image hidden="{{emojiStatus}}" class="add-icon comment-icon" src="/images/icon/wx_app_emoji1.png" catchtap="getEmoji"></image>
+      <image hidden="{{!emojiStatus}}" class="add-icon comment-icon" src="/images/icon/wx_app_keyboard.png" catchtap="getKeyboard"></image>
+      <image class="add-icon comment-icon" src="/images/icon/wx_app_add.png" ></image>
+      <view class="submit-send" catchtap="sendMoreMsg">发送</view>
+    </view> 
+  </view>
+  -->

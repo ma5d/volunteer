@@ -1,0 +1,48 @@
+<view class="container">
+<view class="choose">
+<view class="title">活动条件的筛选(默认为不限)</view>
+<view class="choose_main">
+
+<picker class="item" mode="selector" range="{{need_number_array}}" bindchange="need_number_change">
+    <text class="act_rs">需要人数:</text><text class="mm">{{need_number_array[need_number_index]}}</text>
+</picker>
+
+<picker class="item" mode="selector" range="{{position_array}}" bindchange="position_change">
+    <text class="act_dd">服务地点:</text><text class="mm">{{position_array[position_index]}}</text>
+</picker>
+
+<picker  class="item" mode="selector" range="{{begin_time_array}}" bindchange="begin_time_change">
+    <text class="act_sj">服务时间:</text><text class="mm">{{begin_time_array[begin_time_index]}}</text>  
+</picker>
+
+<picker class="item" mode="selector" range="{{act_type_array}}" bindchange="act_type_change">
+    <text class="act_lx">服务类型:</text><text class="mm">{{act_type_array[act_type_index]}}</text>  
+</picker>
+</view>
+<button class="btn" bindtap="submit">确定</button>
+</view>
+
+
+<!-- <view class="" hover-class="none" hover-stop-propagation="false">
+    <view wx:for="{{changed_array}}" wx:key="index">
+    {{item.demand_quantity}}
+    {{item.location}}
+    {{item.position}}
+    {{item.work_time}}
+    {{item.work_type}}
+    </view>
+</view> -->
+
+<view class="activity" wx:for="{{changed_array}}" wx:key="index">
+    <view class="activity_deteil">
+        <image src="{{item.pictures[0]}}" class="activity_image"></image>
+        <view class="activity_content">
+            <view class="activity_position">{{item.act_name}}</view>
+            <view class="activity_work_time">{{item.begin_time}}</view>
+            <view class="activity_demand_quantity">招聘人数：{{item.need_number}}</view>
+            <view class="activity_work_type">{{item.act_type}}</view>
+            <view class="activity_more" bindtap="activity_more" id="{{item._id}}">更多</view>
+        </view>
+    </view>
+</view>
+</view>

@@ -1,0 +1,5 @@
+/* pages/settings/settings.wxss */
+.refull_info{
+  height: 50rpx;
+  margin: auto;
+}

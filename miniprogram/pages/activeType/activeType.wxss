@@ -1,0 +1,5 @@
+/* pages/activeType/activeType.wxss */
+.highText{
+  font-size: 50rpx;
+  color: red;
+  }

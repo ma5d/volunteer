@@ -1,0 +1,9 @@
+/* pages/add_activity/add_activity.wxss */
+.add_pictures {
+    margin: 10px;
+}
+input{
+    width: 600rpx;
+    margin-top: 10rpx;
+    border-bottom: 2rpx solid #ccc;
+}

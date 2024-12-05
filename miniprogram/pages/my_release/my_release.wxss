@@ -1,0 +1,5 @@
+/* pages/my_release/my_release.wxss */
+
+.more {
+    display: inline;
+}

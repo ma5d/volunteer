@@ -1,0 +1,5 @@
+/* pages/sense/sense.wxss */
+.highText{
+  font-size: 50rpx;
+  color: red;
+  }

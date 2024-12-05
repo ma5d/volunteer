@@ -1,0 +1,62 @@
+{
+    "pages": [
+
+        "pages/index/index",
+        "pages/login/index",
+        "pages/activeType/activeType",
+        "pages/classification/classification",
+        "pages/published/published",
+        "pages/background/background",
+        "pages/spirit/spirit",
+        "pages/sense/sense",
+        "pages/guide/guide",
+        "pages/comment/comment",
+        "pages/logs/logs",
+        "pages/openapi/openapi",
+        "pages/post/post",
+        "pages/mine/mine",
+        "pages/my_message/my_message",
+        "pages/settings/settings",
+        "pages/feedback/feedback",
+        "pages/my_application/my_application",
+        "pages/refull_info/refull_info",
+        "pages/my_release/my_release",
+        "pages/add_activity/add_activity",
+        "pages/manage_activity/manage_activity"
+    ],
+    "window": {
+        "backgroundColor": "#000000",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#03f1d2",
+        "enablePullDownRefresh": true,
+        "navigationBarTitleText": "众志集结号",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2",
+    "tabBar": {
+        "color": "#cccccc",
+        "selectedColor": "#000000",
+        "backgroundColor": "#ffffff",
+        "borderStyle": "black",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "icon/home_page.png",
+                "selectedIconPath": "icon/home_page_selected.png"
+            },
+            {
+                "pagePath": "pages/classification/classification",
+                "text": "分类",
+                "iconPath": "icon/classification.png",
+                "selectedIconPath": "icon/classification_selected.png"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "我的",
+                "iconPath": "icon/mine.png",
+                "selectedIconPath": "icon/mine_selected.png"
+            }
+        ]
+    }
+}

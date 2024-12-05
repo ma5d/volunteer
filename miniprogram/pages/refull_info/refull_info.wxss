@@ -1,0 +1,21 @@
+.title{
+    display: flex;
+    flex-direction: center;
+    font-size:large;
+
+}
+view{
+    margin-bottom: 30rpx;
+}
+.container{
+    margin: 10rpx;
+}
+input{
+    width: 600rpx;
+    margin-top: 10rpx;
+    border-bottom: 2rpx solid #ccc;
+}
+label{
+    display: block;
+    margin: 8rpx;
+}

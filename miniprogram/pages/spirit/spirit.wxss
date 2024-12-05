@@ -1,0 +1,6 @@
+/* pages/spirit/spirit.wxss */
+
+.highText{
+  font-size: 50rpx;
+  color: red;
+  }

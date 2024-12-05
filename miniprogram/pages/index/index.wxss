@@ -1,0 +1,110 @@
+/**index.wxss**/
+
+.banneritem {
+    width: 100%;
+}
+
+.banneritem image {
+    width: 100%;
+}
+
+.plate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 240rpx;
+    background: #fff;
+}
+
+.plate-item {
+    display: flex;
+    float: left;
+    position: relative;
+    width: 140rpx;
+    height: 180rpx;
+    margin-top: 38rpx;
+    margin-left: 42rpx;
+}
+
+.plate-img image {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.plate-info {
+    position: absolute;
+    height: 40rpx;
+    font-size: 32rpx;
+    font-family: '微软雅黑';
+    bottom: 60rpx;
+    color: rgba(37, 131, 238, 0.836);
+    left: -10rpx;
+}
+
+.activity {
+    width: 98%;
+    height: 200rpx;
+    /* background: blue; */
+    margin: 7rpx auto;
+    border: 1rpx solid black;
+    border-radius: 5px;
+}
+
+.activity_image {
+    width: 33%;
+    height: 180rpx;
+    float: left;
+    /* background: red; */
+    margin: 7rpx;
+    /* border: 1rpx solid black; */
+}
+
+.activity_content {
+    width: 63%;
+    height: 180rpx;
+    float: right;
+    /* background: red; */
+    margin: 7rpx;
+    /* border: 1rpx solid black; */
+}
+
+.activity_position {
+    width: 95%;
+    height: 50rpx;
+    /* background: white; */
+    margin: 7rpx;
+    float: left;
+}
+
+.activity_work_time {
+    width: 45%;
+    height: 50rpx;
+    /* background: white; */
+    margin: 7rpx;
+    float: left;
+}
+
+.activity_demand_quantity {
+    width: 46%;
+    height: 50rpx;
+    /* background: white; */
+    margin: 7rpx;
+    float: left;
+}
+
+.activity_work_type {
+    width: 45%;
+    height: 50rpx;
+    /* background: burlywood; */
+    margin: 7rpx;
+    float: left;
+}
+
+.activity_more {
+    width: 45%;
+    height: 50rpx;
+    /* background: yellow; */
+    margin: 7rpx;
+    float: left;
+}

@@ -1,0 +1,5 @@
+<!--pages/settings/settings.wxml-->
+<text>pages/settings/settings.wxml</text>
+<navigator class="refull_info" url="/pages/refull_info/refull_info" open-type="navigate">
+    完善信息
+</navigator>

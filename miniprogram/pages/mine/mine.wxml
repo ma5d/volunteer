@@ -1,0 +1,52 @@
+<!--pages/mine/mine.wxml-->
+<view class="user_info_wrap">
+	<!-- 用户信息 -->
+	<view class="userinfo">
+		<block wx:if="{{userInfo.nickName}}">
+			<!-- 头像 -->
+			<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" />
+			<view class='userinfo_right'>
+				<!-- 昵称 -->
+				<text class="userinfo_nickname">{{openid !='' ? userInfo.nickName : '登录'}}</text>
+				<view class='userinfo_des_box'>
+					<!-- 角色 -->
+					<text class="userinfo_role" decode="{{true}}">{{openid !='' ? userLevel.levelName : '角色'}}</text>
+					<!-- 更新信息按钮
+      
+	  <view class="btn-update" wx:if="{{openid !=''}}">
+        <button open-type="getUserInfo" bindgetuserinfo="refresh">更新信息</button>
+      </view> -->
+
+					<view class="main">
+						<view class="u1">
+							<text class="pia">
+                <text class="text">参与活动：</text>
+							<text class="numb">{{num1}}</text>
+							</text>
+							<text class="integrity">
+                <text class="text">诚信值：</text>
+							<text class="numb">{{num2}}</text>
+							</text>
+						</view>
+					</view>
+
+				</view>
+			</view>
+
+		</block>
+
+		<button wx:else bindtap="handleLogin">登录</button>
+	</view>
+
+	<!-- 主要内容 -->
+
+	<navigator url="/pages/my_application/my_application" class="item" id="l1">我的申请</navigator>
+	<navigator url="/pages/my_message/my_message" class="item">我的留言</navigator>
+	<navigator url="/pages/my_release/my_release" class="item">我的发布</navigator>
+	<navigator url="/pages/refull_info/refull_info" class="item">完善信息</navigator>
+	<navigator url="/pages/feedback/feedback" class="item">意见反馈</navigator>
+	<navigator url="/pages/settings/settings" class="item">设置</navigator>
+	<navigator url="/pages/login/index" class="item">重新登录</navigator>
+
+</view>
+

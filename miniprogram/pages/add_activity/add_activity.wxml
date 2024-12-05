@@ -1,0 +1,26 @@
+<!--pages/add_activity/add_activity.wxml-->
+<form bindsubmit="add_activity">
+    <view>请输入需求人数</view>
+    <input name="need_number"></input>
+    <view>请输入工作地点</view>
+    <input name="position" ></input>
+    <view>请输入工作职位</view>
+    <input name="act_name"></input>
+    <view>请输入开始时间</view>
+    <input name="begin_time"></input>
+    <view>请输入结束时间</view>
+    <input name="finish_time"></input>
+    <view>请输入工作类型</view>
+    <input name="act_type"></input>
+    <view>请输入活动介绍</view>
+    <input name="introduction_text"></input>
+    <view wx:for="{{pictures}}" wx:key="index">
+            <image src="{{item}}" class="activity_image"></image>
+    </view>
+    <text>\n</text>
+<button class="add_pictures" type="primary" bindtap="add_pictures">添加图片</button>
+<button type="primary" form-type="reset">清空</button>
+<text>\n</text>
+<text>\n</text>
+<button type="primary" form-type="submit">发布活动</button>
+</form>
